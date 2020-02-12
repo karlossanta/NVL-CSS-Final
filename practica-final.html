@@ -4,124 +4,7 @@
     <head>
         <meta charset="utf-8">
         <title>NVL-CSS-P5a</title>
-        <link rel="stylesheet" href="mezcla.css">
-        <style>
-            /* Vamos a establecer las fuentes por defecto */
-            html {
-                font-family: Verdana, Geneva, Tahoma, sans-serif;
-                /* añadimos una imagen de fondo */
-                background-image: url("fondo.jpg");
-                background-size: cover;
-                height: 100%;
-                margin: 0;
-            }
-            /* Las fuentes que deseamos para los titulos */
-            h1, h2, h3 {
-                font-family: fantasy;
-                font-variant: small-caps;
-                color: blue;
-            }
-            h3 {
-                font-size: 1.8em;
-            }
-            h2 {
-                font-size: 2.5em;
-                border-bottom: 1px solid blue;
-            }
-            h1 {
-                font-size: 3.5em;
-            }
-            /* Vamos a estilizar un poco el header */
-            header {
-                position: relative;
-            }
-            header > h1{
-                position: absolute;
-                left: 50%;
-                transform: translateX(-50%);
-                display: inline-block;
-            }
-            /* Estilizamos las columnas manualmente, estableciendo un ancho para las columnas izquierda y derecha del 25% y para la central del 50% */
-            .columnas{
-                position: relative;
-            }
-            #columna1 {
-                position: absolute;
-                left: 10px;
-                width: 20%;
-                top: 10px;
-
-            }
-            /* Añadimos formato a los enlaces */
-            a {
-                color: blue;
-            }
-            #columna2 {
-                position: absolute;
-                left: 25%;
-                width: 45%;
-                top: 10px;
-                padding: 10px;
-                border-right: 2px solid blue;
-                border-left: 2px solid blue;
-            }
-            /* Jugamsos un poco con la alineación del contenido */
-            #columna2 h2 {
-                text-align: center;
-            }
-            #columna2 h3 {
-                padding-left: 20px;
-            }
-            /* Establecemos cómo será el contenido del blog, en este caso la etiqueta <b> (blod, negrita) */
-            #columna2 b {
-                font-weight: bolder;
-                color: blue;
-            }
-            /* Las las imágenes introducidas serán flotantes en el lado derecho con una altura de 150 px */
-            #columna2 img {
-                float: right;
-                height: 150px;
-                padding-left: 10px;
-            }
-            /* y al finalizar cada post añadimos una doble línea para separar visualmente todos los posts */
-            #columna2 div {
-                padding: 0px 10px;
-                border-bottom: 2px double blue;
-            }
-            #columna2 p{
-                font: 1.1em Georgia;
-                text-align: justify;
-            }
-            /* Si en vez de una imágen, hay 2, la segunda y posteriores las coloca en el lado izquierdo */
-            #columna2 img ~ img {
-                float: left;
-                height: 150px;
-                padding-right: 10px;
-            }
-            /* añadimos formato a la tercera columna */
-            #columna3 {
-                position: absolute;
-                left: 75%;
-                width: 20%;
-                top: 10px;
-            }
-            /* Añadimos estilo al footer */
-            body {
-                position: relative;
-                min-height: 100%;
-            }
-            footer {
-                position: absolute;
-                bottom: 0;
-                width: 100%;
-                background-color: black;
-                opacity: 0.5;
-                text-align: center;
-                color: white;
-                height: 150px;
-                margin-top: 150px;
-            }
-        </style>
+        <link rel="stylesheet" href="style.css">
     </head>
 
     <body>
@@ -226,7 +109,6 @@
                     <a href=#muchas_imagenes>Lorem Ipsum con más Imágenes</a><br>
                 </div>
             </div>
-
             
         </div>
         
