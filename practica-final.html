@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+
+    <head>
+        <meta charset="utf-8">
+        <title>NVL-CSS-P5a</title>
+        <link rel="stylesheet" href="mezcla.css">
+        <style>
+            /* Vamos a establecer las fuentes por defecto */
+            html {
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                /* añadimos una imagen de fondo */
+                background-image: url("fondo.jpg");
+                background-size: cover;
+                height: 100%;
+                margin: 0;
+            }
+            /* Las fuentes que deseamos para los titulos */
+            h1, h2, h3 {
+                font-family: fantasy;
+                font-variant: small-caps;
+                color: blue;
+            }
+            h3 {
+                font-size: 1.8em;
+            }
+            h2 {
+                font-size: 2.5em;
+                border-bottom: 1px solid blue;
+            }
+            h1 {
+                font-size: 3.5em;
+            }
+            /* Vamos a estilizar un poco el header */
+            header {
+                position: relative;
+            }
+            header > h1{
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                display: inline-block;
+            }
+            /* Estilizamos las columnas manualmente, estableciendo un ancho para las columnas izquierda y derecha del 25% y para la central del 50% */
+            .columnas{
+                position: relative;
+            }
+            #columna1 {
+                position: absolute;
+                left: 10px;
+                width: 20%;
+                top: 10px;
+
+            }
+            /* Añadimos formato a los enlaces */
+            a {
+                color: blue;
+            }
+            #columna2 {
+                position: absolute;
+                left: 25%;
+                width: 45%;
+                top: 10px;
+                padding: 10px;
+                border-right: 2px solid blue;
+                border-left: 2px solid blue;
+            }
+            /* Jugamsos un poco con la alineación del contenido */
+            #columna2 h2 {
+                text-align: center;
+            }
+            #columna2 h3 {
+                padding-left: 20px;
+            }
+            /* Establecemos cómo será el contenido del blog, en este caso la etiqueta <b> (blod, negrita) */
+            #columna2 b {
+                font-weight: bolder;
+                color: blue;
+            }
+            /* Las las imágenes introducidas serán flotantes en el lado derecho con una altura de 150 px */
+            #columna2 img {
+                float: right;
+                height: 150px;
+                padding-left: 10px;
+            }
+            /* y al finalizar cada post añadimos una doble línea para separar visualmente todos los posts */
+            #columna2 div {
+                padding: 0px 10px;
+                border-bottom: 2px double blue;
+            }
+            #columna2 p{
+                font: 1.1em Georgia;
+                text-align: justify;
+            }
+            /* Si en vez de una imágen, hay 2, la segunda y posteriores las coloca en el lado izquierdo */
+            #columna2 img ~ img {
+                float: left;
+                height: 150px;
+                padding-right: 10px;
+            }
+            /* añadimos formato a la tercera columna */
+            #columna3 {
+                position: absolute;
+                left: 75%;
+                width: 20%;
+                top: 10px;
+            }
+            /* Añadimos estilo al footer */
+            body {
+                position: relative;
+                min-height: 100%;
+            }
+            footer {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                background-color: black;
+                opacity: 0.5;
+                text-align: center;
+                color: white;
+                height: 150px;
+                margin-top: 150px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <img src="bombilla.png" alt="logo de una bombilla">
+            <h1>El Blog de Las Cosas</h1>
+        </header>
+        <div id="main-content">
+            <div class="columnas">
+                <!-- La primera columna está compuesta por enlaces al contenido de la columna central -->
+                <div id="columna1">
+                    <h2>Menú de Contenidos</h2>
+                    <a href=#prueba>Post de Prueba</a><br>
+                    <a href=#lipsum>Lorem Ipsum</a><br>
+                    <a href=#muchas_imagenes>Lorem Ipsum con más Imágenes</a><br>
+                    <a href=#ciberseg>Ciberseguridad</a><br>
+                </div
+                ><div id="columna2">
+                    <!-- Esta coluna contiene todos los posts y es el contenido principal del blog -->
+                    <h2>Contenido del Blog</h2>
+                    <div>
+                        <a name="prueba"></a>
+                        <h3>Post de Prueba</h3>
+                        <p>
+                            Esto es prácticamente un texto  de prueba para un post de prueba para probar los <b>CSS</b> y el funcionamiento de los estilos a lo largo del blog. Para realizar esta prueba estoy añadiendo mucho texto al azar, tanto sin pensarlo, como de <b>paginas de auto generación</b>. Me gusta que los párrafos sean algo largos para que sean más visuales y se noten más los cambios y efectos.
+                        </p>
+                    </div>
+
+                    <div>
+                        <a name="lipsum"></a>
+                        <h3>Lorem Ipsum</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed mauris eget ante viverra molestie. Suspendisse eleifend laoreet orci, quis ultricies velit pulvinar in. Nulla consequat sapien nisl, eu auctor quam gravida sagittis. Aliquam id pharetra nunc. Suspendisse potenti. Vivamus varius faucibus augue, ut faucibus est rhoncus placerat. Duis imperdiet magna condimentum, dictum dolor vel, sodales mauris. In vel mollis risus. Sed lorem odio, sagittis a interdum eget, lacinia sed mi. Phasellus vestibulum pellentesque mi sed semper. Fusce mattis sapien erat, ut imperdiet tortor viverra id. Aliquam sodales blandit urna id porta.
+                        </p>
+                        <img src="lorem-ipsum.jpg" alt="imagen que hace referencia al texto lorem ipsum">
+                        <p>
+                            Mauris at commodo justo. Aliquam erat volutpat. Etiam sapien libero, suscipit vitae mattis non, vehicula eget quam. Orci varius natoque <b>penatibus et magnis</b> dis parturient montes, nascetur ridiculus mus. Ut quis nisl odio. Curabitur ut nisl neque. Phasellus nec interdum dolor. Fusce venenatis mauris massa, in aliquet elit ullamcorper vitae. Sed volutpat, enim at ultrices accumsan, sapien erat molestie nisl, condimentum varius massa lorem ut risus. Integer non purus facilisis, feugiat ligula sed, mattis libero. Etiam mattis nec mauris interdum mattis. Nulla at scelerisque erat. Nam mattis rutrum eros ut faucibus. Nunc vehicula tortor et odio dignissim mattis. Integer dapibus eu metus ut consectetur. Morbi commodo justo a mi dapibus, vel congue enim rutrum.
+                        </p>
+                        <p>
+                            Quisque congue in neque quis rhoncus. Proin enim enim, consectetur nec elementum vel, venenatis a odio. Nunc sit amet ante tincidunt, mollis metus sit amet, egestas sem. Nam ac nibh vitae augue vestibulum rutrum vel sed sem. <b>Pellentesque</b> fermentum eleifend dictum. Donec vestibulum placerat accumsan. Phasellus scelerisque in diam id pretium. Donec elementum egestas ipsum, sit amet auctor augue efficitur at. Mauris at egestas ipsum. Vestibulum ullamcorper dapibus feugiat. Duis efficitur, nunc ut convallis porttitor, urna justo posuere est, at volutpat arcu orci non sem. Proin est diam, ullamcorper eget nulla et, blandit dignissim odio. Donec at dui augue.
+                        </p>
+                        <p>
+                            Aenean velit erat, bibendum sed mattis quis, bibendum eget purus. Nulla feugiat odio in ligula euismod, pellentesque suscipit nulla eleifend. Proin rhoncus, tellus ut feugiat aliquet, quam dui cursus eros, id congue lectus nunc scelerisque augue. Sed <b>vehicula libero</b> nec dolor elementum, dapibus sagittis justo pharetra. Sed ultricies risus vel sollicitudin bibendum. Fusce viverra sem libero. Nulla in enim vel ligula cursus posuere ut quis metus. Nullam sit amet elit vel sapien aliquet aliquam eget nec risus. Mauris hendrerit quis ipsum nec rutrum. Ut cursus odio vitae dolor interdum, non lobortis dui consectetur. Vestibulum cursus, dui finibus hendrerit malesuada, orci elit imperdiet mi, tristique laoreet justo felis in mauris. Nulla mollis arcu purus, vitae tincidunt arcu ultrices eget. Duis quis dictum justo. Integer tempus dui libero, nec condimentum magna suscipit ut. Ut rhoncus bibendum viverra.
+                        </p>
+                        <p>
+                            Nam rutrum pulvinar suscipit. Aliquam porttitor, magna vitae convallis commodo, magna lacus lobortis diam, et tempus ligula ipsum nec ante. Nunc blandit, quam a commodo tristique, felis enim laoreet ante, et consequat nisl mi sit amet eros. Maecenas sed odio commodo, dictum felis ac, vehicula sapien. Aenean sagittis sapien nec est congue, nec congue felis venenatis. Vivamus egestas lectus augue, varius commodo dolor auctor eu. Nullam iaculis consequat vehicula. In blandit mattis dui, non viverra nisi consectetur at. Etiam pretium dolor nec augue lobortis lacinia. Fusce ac mi id turpis tristique elementum. Vestibulum eget semper nisi.
+                        </p>
+                    </div>
+                    
+                    <div>
+                        <a name="muchas_imagenes"></a>
+                        <h3>Lorem Ipsum con más Imágenes</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed mauris eget ante viverra molestie. Suspendisse eleifend laoreet orci, quis ultricies velit pulvinar in. Nulla consequat sapien nisl, eu auctor quam gravida sagittis. Aliquam id pharetra nunc. Suspendisse potenti. Vivamus varius faucibus augue, ut faucibus est rhoncus placerat. Duis imperdiet magna condimentum, dictum dolor vel, sodales mauris. In vel mollis risus. Sed lorem odio, sagittis a interdum eget, lacinia sed mi. Phasellus vestibulum pellentesque mi sed semper. Fusce mattis sapien erat, ut imperdiet tortor viverra id. Aliquam sodales blandit urna id porta.
+                        </p>
+                        <img src="lorem-ipsum.jpg" alt="imagen que hace referencia al texto lorem ipsum">
+                        
+                        <p>
+                            Mauris at commodo <a href="https://www.google.es">justo</a>. Aliquam erat volutpat. Etiam sapien libero, suscipit vitae mattis non, vehicula eget quam. Orci varius natoque <b>penatibus et magnis</b> dis parturient montes, nascetur ridiculus mus. Ut quis nisl odio. Curabitur ut nisl neque. Phasellus nec interdum dolor. Fusce venenatis mauris massa, in aliquet elit ullamcorper vitae. Sed volutpat, enim at ultrices accumsan, sapien erat molestie nisl, condimentum varius massa lorem ut risus. Integer non purus facilisis, feugiat ligula sed, mattis libero. Etiam mattis nec mauris interdum mattis. Nulla at scelerisque erat. Nam mattis rutrum eros ut faucibus. Nunc vehicula tortor et odio dignissim mattis. Integer dapibus eu metus ut consectetur. Morbi commodo justo a mi dapibus, vel congue enim rutrum.
+                        </p>
+                        <p>
+                            Quisque congue in neque quis rhoncus. Proin enim enim, consectetur nec elementum vel, venenatis a odio. Nunc sit amet ante tincidunt, mollis metus sit amet, egestas sem. Nam ac nibh vitae augue vestibulum rutrum vel sed sem. <b>Pellentesque</b> fermentum eleifend dictum. Donec vestibulum placerat accumsan. Phasellus scelerisque in diam id pretium. Donec elementum egestas ipsum, sit amet auctor augue efficitur at. Mauris at egestas ipsum. Vestibulum ullamcorper dapibus feugiat. Duis efficitur, nunc ut convallis porttitor, urna justo posuere est, at volutpat arcu orci non sem. Proin est diam, ullamcorper eget nulla et, blandit dignissim odio. Donec at dui augue.
+                        </p>
+                        <img src="azar.png" alt="imagen del azar">
+                        <p>
+                            Aenean velit erat, bibendum sed mattis quis, bibendum eget purus. Nulla feugiat odio in ligula euismod, pellentesque suscipit nulla eleifend. Proin rhoncus, tellus ut feugiat aliquet, quam dui cursus eros, id congue lectus nunc scelerisque augue. Sed <b>vehicula libero</b> nec dolor elementum, dapibus sagittis justo pharetra. Sed ultricies risus vel sollicitudin bibendum. Fusce viverra sem libero. Nulla in enim vel ligula cursus posuere ut quis metus. Nullam sit amet elit vel sapien aliquet aliquam eget nec risus. Mauris hendrerit quis ipsum nec rutrum. Ut cursus odio vitae dolor interdum, non lobortis dui consectetur. Vestibulum cursus, dui finibus hendrerit malesuada, orci elit imperdiet mi, tristique laoreet justo felis in mauris. Nulla mollis arcu purus, vitae tincidunt arcu ultrices eget. Duis quis dictum justo. Integer tempus dui libero, nec condimentum magna suscipit ut. Ut rhoncus bibendum viverra.
+                        </p>
+                        <p>
+                            Nam rutrum pulvinar suscipit. Aliquam porttitor, magna vitae convallis commodo, magna lacus lobortis diam, et tempus ligula ipsum nec ante. Nunc blandit, quam a commodo tristique, felis enim laoreet ante, et consequat nisl mi sit amet eros. Maecenas sed odio commodo, dictum felis ac, vehicula sapien. Aenean sagittis sapien nec est congue, nec congue felis venenatis. Vivamus egestas lectus augue, varius commodo dolor auctor eu. Nullam iaculis consequat vehicula. In blandit mattis dui, non viverra nisi consectetur at. Etiam pretium dolor nec augue lobortis lacinia. Fusce ac mi id turpis tristique elementum. Vestibulum eget semper nisi.
+                        </p>
+                    </div>
+                    
+                    <div>
+                        <a name="ciberseg"></a>
+                        <h3>Ciberseguridad</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed mauris eget ante viverra molestie. Suspendisse eleifend laoreet orci, quis ultricies velit pulvinar in. Nulla consequat sapien nisl, eu auctor quam gravida sagittis. Aliquam id pharetra nunc. Suspendisse potenti. Vivamus varius faucibus augue, ut faucibus est rhoncus placerat. Duis imperdiet magna condimentum, dictum dolor vel, sodales mauris. In vel mollis risus. Sed lorem odio, sagittis a interdum eget, lacinia sed mi. Phasellus vestibulum pellentesque mi sed semper. Fusce mattis sapien erat, ut imperdiet tortor viverra id. Aliquam sodales blandit urna id porta.
+                        </p>
+                        <img src="lorem-ipsum.jpg" alt="imagen que hace referencia al texto lorem ipsum">
+                        
+                        <p>
+                            Mauris at commodo justo. Aliquam erat volutpat. Etiam sapien libero, suscipit vitae mattis non, vehicula eget quam. Orci varius natoque <b>penatibus et magnis</b> dis parturient montes, nascetur ridiculus mus. Ut quis nisl odio. Curabitur ut nisl neque. Phasellus nec interdum dolor. Fusce venenatis mauris massa, in aliquet elit ullamcorper vitae. Sed volutpat, enim at ultrices accumsan, sapien erat molestie nisl, condimentum varius massa lorem ut risus. Integer non purus facilisis, feugiat ligula sed, mattis libero. Etiam mattis nec mauris interdum mattis. Nulla at scelerisque erat. Nam mattis rutrum eros ut faucibus. Nunc vehicula tortor et odio dignissim mattis. Integer dapibus eu metus ut consectetur. Morbi commodo justo a mi dapibus, vel congue enim rutrum.
+                        </p>
+                        <p>
+                            Quisque congue in neque quis rhoncus. Proin enim enim, consectetur nec elementum vel, venenatis a odio. Nunc sit amet ante tincidunt, mollis metus sit amet, egestas sem. Nam ac nibh vitae augue vestibulum rutrum vel sed sem. <b>Pellentesque</b> fermentum eleifend dictum. Donec vestibulum placerat accumsan. Phasellus scelerisque in diam id pretium. Donec elementum egestas ipsum, sit amet auctor augue efficitur at. Mauris at egestas ipsum. Vestibulum ullamcorper dapibus feugiat. Duis efficitur, nunc ut convallis porttitor, urna justo posuere est, at volutpat arcu orci non sem. Proin est diam, ullamcorper eget nulla et, blandit dignissim odio. Donec at dui augue.
+                        </p>
+                        <img src="azar.png" alt="imagen del azar">
+                        <p>
+                            Aenean velit erat, bibendum sed mattis quis, bibendum eget purus. Nulla feugiat odio in ligula euismod, pellentesque suscipit nulla eleifend. Proin rhoncus, tellus ut feugiat aliquet, quam dui cursus eros, id congue lectus nunc scelerisque augue. Sed <b>vehicula libero</b> nec dolor elementum, dapibus sagittis justo pharetra. Sed ultricies risus vel sollicitudin bibendum. Fusce viverra sem libero. Nulla in enim vel ligula cursus posuere ut quis metus. Nullam sit amet elit vel sapien aliquet aliquam eget nec risus. Mauris hendrerit quis ipsum nec rutrum. Ut cursus odio vitae dolor interdum, non lobortis dui consectetur. Vestibulum cursus, dui finibus hendrerit malesuada, orci elit imperdiet mi, tristique laoreet justo felis in mauris. Nulla mollis arcu purus, vitae tincidunt arcu ultrices eget. Duis quis dictum justo. Integer tempus dui libero, nec condimentum magna suscipit ut. Ut rhoncus bibendum viverra.
+                        </p>
+                        <img src="ciberseg.jpg" alt="imagen relacionada con ciberseguridad, candado y tecnología">
+                        <p>
+                            Nam rutrum pulvinar suscipit. Aliquam porttitor, magna vitae convallis commodo, magna lacus lobortis diam, et tempus ligula ipsum nec ante. Nunc blandit, quam a commodo tristique, felis enim laoreet ante, et consequat nisl mi sit amet eros. Maecenas sed odio commodo, dictum felis ac, vehicula sapien. Aenean sagittis sapien nec est congue, nec congue felis venenatis. Vivamus egestas lectus augue, varius commodo dolor auctor eu. Nullam iaculis consequat vehicula. In blandit mattis dui, non viverra nisi consectetur at. Etiam pretium dolor nec augue lobortis lacinia. Fusce ac mi id turpis tristique elementum. Vestibulum eget semper nisi.
+                        </p>
+                    </div>
+                    
+                </div>
+                <div id="columna3">
+                    <!-- aquí encontramos una selección de enlaces, que al fin y al cabo son enlaces destacados de la primera colummna -->
+                    <h2>Enlaces Destacados</h2>
+                    <a href=#lipsum>Lorem Ipsum</a><br>
+                    <a href=#muchas_imagenes>Lorem Ipsum con más Imágenes</a><br>
+                </div>
+            </div>
+
+            
+        </div>
+        
+        <footer>
+            <p>Posted by: Carlos Santamaría</p>
+            <p>Contact Information: <a href="mailto:karlosssanta@gmail.com">karlosssanta@gmail.com</a></p>
+            <p>Realizado para Upgrade Hub Bootcamp&copy;</p>
+        </footer>
+    </body>
+
+</html>
